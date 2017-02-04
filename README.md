@@ -13,7 +13,7 @@ but you don't know the size in advance.
 sv <- stdvectorCreate(type='integer')
 for(i in 1:10){
   # yes we're modify the vector in-place !
-  stdvectorCreate(sv,i)
+  stdvectorPushBack(sv,i)
 }
 ```
 
