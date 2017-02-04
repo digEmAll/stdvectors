@@ -1,0 +1,11 @@
+Package: stdvectors
+Type: Package
+Title: C++ Standard Library Vectors in R
+Version: 0.0.3
+Date: 2017-02-04
+Author: Marco Giuliano
+Maintainer: Marco Giuliano <mgiuliano.mail@gmail.com>
+Description: Allows the creation and manipulation of C++ std::vector's in R.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.4)
+LinkingTo: Rcpp

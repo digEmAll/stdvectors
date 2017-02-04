@@ -1,0 +1,6 @@
+useDynLib(stdvectors)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
+
+S3method(print, stdvector)
+S3method(toString, stdvector)
