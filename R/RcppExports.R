@@ -25,6 +25,14 @@
     .Call('stdvectors_stdNumericSubset', PACKAGE = 'stdvectors', p, indexes)
 }
 
+.stdNumericReplace <- function(p, indexes, values) {
+    invisible(.Call('stdvectors_stdNumericReplace', PACKAGE = 'stdvectors', p, indexes, values))
+}
+
+.stdNumericErase <- function(p, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdNumericErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+}
+
 .stdNumericClone <- function(p) {
     .Call('stdvectors_stdNumericClone', PACKAGE = 'stdvectors', p)
 }
@@ -51,6 +59,14 @@
 
 .stdIntegerSubset <- function(p, indexes) {
     .Call('stdvectors_stdIntegerSubset', PACKAGE = 'stdvectors', p, indexes)
+}
+
+.stdIntegerReplace <- function(p, indexes, values) {
+    invisible(.Call('stdvectors_stdIntegerReplace', PACKAGE = 'stdvectors', p, indexes, values))
+}
+
+.stdIntegerErase <- function(p, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdIntegerErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
 }
 
 .stdNumericClone <- function(p) {
@@ -81,6 +97,14 @@
     .Call('stdvectors_stdCharacterSubset', PACKAGE = 'stdvectors', p, indexes)
 }
 
+.stdCharacterReplace <- function(p, indexes, values) {
+    invisible(.Call('stdvectors_stdCharacterReplace', PACKAGE = 'stdvectors', p, indexes, values))
+}
+
+.stdCharacterErase <- function(p, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdCharacterErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+}
+
 .stdCharacterClone <- function(p) {
     .Call('stdvectors_stdCharacterClone', PACKAGE = 'stdvectors', p)
 }
@@ -109,6 +133,14 @@
     .Call('stdvectors_stdLogicalSubset', PACKAGE = 'stdvectors', p, indexes)
 }
 
+.stdLogicalReplace <- function(p, indexes, values) {
+    invisible(.Call('stdvectors_stdLogicalReplace', PACKAGE = 'stdvectors', p, indexes, values))
+}
+
+.stdLogicalErase <- function(p, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdLogicalErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+}
+
 .stdCharacterClone <- function(p) {
     .Call('stdvectors_stdLogicalClone', PACKAGE = 'stdvectors', p)
 }
@@ -135,6 +167,14 @@
 
 .stdAnySubset <- function(p, indexes) {
     .Call('stdvectors_stdAnySubset', PACKAGE = 'stdvectors', p, indexes)
+}
+
+.stdAnyReplace <- function(p, index, value) {
+    invisible(.Call('stdvectors_stdAnyReplace', PACKAGE = 'stdvectors', p, index, value))
+}
+
+.stdAnyErase <- function(p, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdAnyErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
 }
 
 .stdAnyClone <- function(p) {
@@ -171,6 +211,14 @@ stdvectorToVector <- function(sdv) {
 
 stdvectorSubset <- function(sdv, indexes) {
     .Call('stdvectors_stdvectorSubset', PACKAGE = 'stdvectors', sdv, indexes)
+}
+
+stdvectorReplace <- function(sdv, indexes, values) {
+    invisible(.Call('stdvectors_stdvectorReplace', PACKAGE = 'stdvectors', sdv, indexes, values))
+}
+
+stdvectorErase <- function(sdv, indexFrom, indexTo) {
+    invisible(.Call('stdvectors_stdvectorErase', PACKAGE = 'stdvectors', sdv, indexFrom, indexTo))
 }
 
 stdvectorClone <- function(sdv) {

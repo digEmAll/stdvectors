@@ -51,6 +51,26 @@ Rcpp::NumericVector stdNumericSubset(SEXP p, Rcpp::IntegerVector indexes){
   return output;
 }
 
+// [[Rcpp::export(rng=false,name=".stdNumericReplace")]]
+void stdNumericReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::NumericVector values){
+  if(indexes.length() != values.length())
+    Rcpp::stop("'indexes' and 'values' lengths must be equal");
+  Rcpp::XPtr< std::vector<double> > ptr(p);
+  Rcpp::NumericVector output(indexes.length());
+  for(int i = 0;i < indexes.length(); i++){
+    int index = indexes[i] - 1;
+    ptr->at(index) = values[i];
+  }
+}
+
+// [[Rcpp::export(rng=false,name=".stdNumericErase")]]
+void stdNumericErase(SEXP p, int indexFrom, int indexTo){
+  Rcpp::XPtr< std::vector<double> > ptr(p);
+  if(indexFrom > indexTo || indexFrom < 1 || indexTo > (int)ptr->size())
+    Rcpp::stop("indexFrom must be >= 1, indexTo <= stdvectorSize and indexFrom <= indexTo");
+  ptr->erase(ptr->begin()+(indexFrom-1),ptr->begin()+(indexTo));
+}
+
 // [[Rcpp::export(rng=false,name=".stdNumericClone")]]
 SEXP stdNumericClone(SEXP p){
   Rcpp::XPtr< std::vector<double> > ptr(p);
@@ -108,6 +128,26 @@ Rcpp::IntegerVector stdIntegerSubset(SEXP p, Rcpp::IntegerVector indexes){
     output[i] = ptr->at(index);
   }
   return output;
+}
+
+// [[Rcpp::export(rng=false,name=".stdIntegerReplace")]]
+void stdIntegerReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::IntegerVector values){
+  if(indexes.length() != values.length())
+    Rcpp::stop("'indexes' and 'values' lengths must be equal");
+  Rcpp::XPtr< std::vector<int> > ptr(p);
+  Rcpp::NumericVector output(indexes.length());
+  for(int i = 0;i < indexes.length(); i++){
+    int index = indexes[i] - 1;
+    ptr->at(index) = values[i];
+  }
+}
+
+// [[Rcpp::export(rng=false,name=".stdIntegerErase")]]
+void stdIntegerErase(SEXP p, int indexFrom, int indexTo){
+  Rcpp::XPtr< std::vector<int> > ptr(p);
+  if(indexFrom > indexTo || indexFrom < 1 || indexTo > (int)ptr->size())
+    Rcpp::stop("indexFrom must be >= 1, indexTo <= stdvectorSize and indexFrom <= indexTo");
+  ptr->erase(ptr->begin()+(indexFrom-1),ptr->begin()+(indexTo));
 }
 
 // [[Rcpp::export(rng=false,name=".stdNumericClone")]]
@@ -169,6 +209,26 @@ Rcpp::CharacterVector stdCharacterSubset(SEXP p, Rcpp::IntegerVector indexes){
   return output;
 }
 
+// [[Rcpp::export(rng=false,name=".stdCharacterReplace")]]
+void stdCharacterReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::CharacterVector values){
+  if(indexes.length() != values.length())
+    Rcpp::stop("'indexes' and 'values' lengths must be equal");
+  Rcpp::XPtr< std::vector<std::string> > ptr(p);
+  Rcpp::NumericVector output(indexes.length());
+  for(int i = 0;i < indexes.length(); i++){
+    int index = indexes[i] - 1;
+    ptr->at(index) = std::string(values[i]);
+  }
+}
+
+// [[Rcpp::export(rng=false,name=".stdCharacterErase")]]
+void stdCharacterErase(SEXP p, int indexFrom, int indexTo){
+  Rcpp::XPtr< std::vector<std::string> > ptr(p);
+  if(indexFrom > indexTo || indexFrom < 1 || indexTo > (int)ptr->size())
+    Rcpp::stop("indexFrom must be >= 1, indexTo <= stdvectorSize and indexFrom <= indexTo");
+  ptr->erase(ptr->begin()+(indexFrom-1),ptr->begin()+(indexTo));
+}
+
 // [[Rcpp::export(rng=false,name=".stdCharacterClone")]]
 SEXP stdCharacterClone(SEXP p){
   Rcpp::XPtr< std::vector<std::string> > ptr(p);
@@ -228,6 +288,26 @@ Rcpp::LogicalVector stdLogicalSubset(SEXP p, Rcpp::IntegerVector indexes){
   return output;
 }
 
+// [[Rcpp::export(rng=false,name=".stdLogicalReplace")]]
+void stdLogicalReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::LogicalVector values){
+  if(indexes.length() != values.length())
+    Rcpp::stop("'indexes' and 'values' lengths must be equal");
+  Rcpp::XPtr< std::vector<int> > ptr(p);
+  Rcpp::NumericVector output(indexes.length());
+  for(int i = 0;i < indexes.length(); i++){
+    int index = indexes[i] - 1;
+    ptr->at(index) = values[i];
+  }
+}
+
+// [[Rcpp::export(rng=false,name=".stdLogicalErase")]]
+void stdLogicalErase(SEXP p, int indexFrom, int indexTo){
+  Rcpp::XPtr< std::vector<int> > ptr(p);
+  if(indexFrom > indexTo || indexFrom < 1 || indexTo > (int)ptr->size())
+    Rcpp::stop("indexFrom must be >= 1, indexTo <= stdvectorSize and indexFrom <= indexTo");
+  ptr->erase(ptr->begin()+(indexFrom-1),ptr->begin()+(indexTo));
+}
+
 // [[Rcpp::export(rng=false,name=".stdCharacterClone")]]
 SEXP stdLogicalClone(SEXP p){
   Rcpp::XPtr< std::vector<int> > ptr(p);
@@ -283,6 +363,21 @@ Rcpp::List stdAnySubset(SEXP p, Rcpp::IntegerVector indexes){
     output[i] = ptr->at(index);
   }
   return output;
+}
+
+// CAUTION this works with one index only
+// [[Rcpp::export(rng=false,name=".stdAnyReplace")]]
+void stdAnyReplace(SEXP p, int index, SEXP value){
+  Rcpp::XPtr< std::vector<Rcpp::RObject> > ptr(p);
+  ptr->at(index-1) = Rcpp::RObject(value);
+}
+
+// [[Rcpp::export(rng=false,name=".stdAnyErase")]]
+void stdAnyErase(SEXP p, int indexFrom, int indexTo){
+  Rcpp::XPtr< std::vector<Rcpp::RObject> > ptr(p);
+  if(indexFrom > indexTo || indexFrom < 1 || indexTo > (int)ptr->size())
+    Rcpp::stop("indexFrom must be >= 1, indexTo <= stdvectorSize and indexFrom <= indexTo");
+  ptr->erase(ptr->begin()+(indexFrom-1),ptr->begin()+(indexTo));
 }
 
 // [[Rcpp::export(rng=false,name=".stdAnyClone")]]
@@ -478,6 +573,59 @@ SEXP stdvectorSubset(Rcpp::List sdv, Rcpp::IntegerVector indexes){
   }
   
   return R_NilValue;
+}
+
+
+// [[Rcpp::export(rng=false)]]
+void stdvectorReplace(Rcpp::List sdv, Rcpp::IntegerVector indexes, SEXP values){
+  int type = Rcpp::as<int>(sdv[1]);  
+  switch(type)
+  {
+  case INTSXP:
+    stdIntegerReplace(sdv[0],indexes,Rcpp::as<Rcpp::IntegerVector>(values));
+    break;
+  case REALSXP:
+    stdNumericReplace(sdv[0],indexes,Rcpp::as<Rcpp::NumericVector>(values));
+    break;
+  case STRSXP:
+    stdCharacterReplace(sdv[0],indexes,Rcpp::as<Rcpp::CharacterVector>(values));
+    break;
+  case LGLSXP:
+    stdLogicalReplace(sdv[0],indexes,Rcpp::as<Rcpp::LogicalVector>(values));
+    break;
+  case ANYSXP:
+    if(indexes.length() != 1)
+      Rcpp::stop("stdvector's of type 'any' support replacement of only one value at a time");
+    stdAnyReplace(sdv[0],indexes[0],values);
+    break;    
+  default:
+    Rcpp::stop("Unsupported type: only 'integer', 'numeric', 'logical', 'character' and 'any' types are supported");
+  }
+}
+
+// [[Rcpp::export(rng=false)]]
+void stdvectorErase(Rcpp::List sdv, int indexFrom, int indexTo){
+  int type = Rcpp::as<int>(sdv[1]);  
+  switch(type)
+  {
+  case INTSXP:
+    stdIntegerErase(sdv[0],indexFrom,indexTo);
+    break;
+  case REALSXP:
+    stdNumericErase(sdv[0],indexFrom,indexTo);
+    break;
+  case STRSXP:
+    stdCharacterErase(sdv[0],indexFrom,indexTo);
+    break;
+  case LGLSXP:
+    stdLogicalErase(sdv[0],indexFrom,indexTo);
+    break;
+  case ANYSXP:
+    stdAnyErase(sdv[0],indexFrom,indexTo);
+    break;    
+  default:
+    Rcpp::stop("Unsupported type: only 'integer', 'numeric', 'logical', 'character' and 'any' types are supported");
+  }
 }
 
 // [[Rcpp::export(rng=false)]]

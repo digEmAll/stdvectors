@@ -65,6 +65,28 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// stdNumericReplace
+void stdNumericReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::NumericVector values);
+RcppExport SEXP stdvectors_stdNumericReplace(SEXP pSEXP, SEXP indexesSEXP, SEXP valuesSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type values(valuesSEXP);
+    stdNumericReplace(p, indexes, values);
+    return R_NilValue;
+END_RCPP
+}
+// stdNumericErase
+void stdNumericErase(SEXP p, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdNumericErase(SEXP pSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdNumericErase(p, indexFrom, indexTo);
+    return R_NilValue;
+END_RCPP
+}
 // stdNumericClone
 SEXP stdNumericClone(SEXP p);
 RcppExport SEXP stdvectors_stdNumericClone(SEXP pSEXP) {
@@ -133,6 +155,28 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
     rcpp_result_gen = Rcpp::wrap(stdIntegerSubset(p, indexes));
     return rcpp_result_gen;
+END_RCPP
+}
+// stdIntegerReplace
+void stdIntegerReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::IntegerVector values);
+RcppExport SEXP stdvectors_stdIntegerReplace(SEXP pSEXP, SEXP indexesSEXP, SEXP valuesSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type values(valuesSEXP);
+    stdIntegerReplace(p, indexes, values);
+    return R_NilValue;
+END_RCPP
+}
+// stdIntegerErase
+void stdIntegerErase(SEXP p, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdIntegerErase(SEXP pSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdIntegerErase(p, indexFrom, indexTo);
+    return R_NilValue;
 END_RCPP
 }
 // stdIntegerClone
@@ -205,6 +249,28 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// stdCharacterReplace
+void stdCharacterReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::CharacterVector values);
+RcppExport SEXP stdvectors_stdCharacterReplace(SEXP pSEXP, SEXP indexesSEXP, SEXP valuesSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
+    Rcpp::traits::input_parameter< Rcpp::CharacterVector >::type values(valuesSEXP);
+    stdCharacterReplace(p, indexes, values);
+    return R_NilValue;
+END_RCPP
+}
+// stdCharacterErase
+void stdCharacterErase(SEXP p, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdCharacterErase(SEXP pSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdCharacterErase(p, indexFrom, indexTo);
+    return R_NilValue;
+END_RCPP
+}
 // stdCharacterClone
 SEXP stdCharacterClone(SEXP p);
 RcppExport SEXP stdvectors_stdCharacterClone(SEXP pSEXP) {
@@ -275,6 +341,28 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// stdLogicalReplace
+void stdLogicalReplace(SEXP p, Rcpp::IntegerVector indexes, Rcpp::LogicalVector values);
+RcppExport SEXP stdvectors_stdLogicalReplace(SEXP pSEXP, SEXP indexesSEXP, SEXP valuesSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
+    Rcpp::traits::input_parameter< Rcpp::LogicalVector >::type values(valuesSEXP);
+    stdLogicalReplace(p, indexes, values);
+    return R_NilValue;
+END_RCPP
+}
+// stdLogicalErase
+void stdLogicalErase(SEXP p, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdLogicalErase(SEXP pSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdLogicalErase(p, indexFrom, indexTo);
+    return R_NilValue;
+END_RCPP
+}
 // stdLogicalClone
 SEXP stdLogicalClone(SEXP p);
 RcppExport SEXP stdvectors_stdLogicalClone(SEXP pSEXP) {
@@ -343,6 +431,28 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
     rcpp_result_gen = Rcpp::wrap(stdAnySubset(p, indexes));
     return rcpp_result_gen;
+END_RCPP
+}
+// stdAnyReplace
+void stdAnyReplace(SEXP p, int index, SEXP value);
+RcppExport SEXP stdvectors_stdAnyReplace(SEXP pSEXP, SEXP indexSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type value(valueSEXP);
+    stdAnyReplace(p, index, value);
+    return R_NilValue;
+END_RCPP
+}
+// stdAnyErase
+void stdAnyErase(SEXP p, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdAnyErase(SEXP pSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< SEXP >::type p(pSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdAnyErase(p, indexFrom, indexTo);
+    return R_NilValue;
 END_RCPP
 }
 // stdAnyClone
@@ -434,6 +544,28 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
     rcpp_result_gen = Rcpp::wrap(stdvectorSubset(sdv, indexes));
     return rcpp_result_gen;
+END_RCPP
+}
+// stdvectorReplace
+void stdvectorReplace(Rcpp::List sdv, Rcpp::IntegerVector indexes, SEXP values);
+RcppExport SEXP stdvectors_stdvectorReplace(SEXP sdvSEXP, SEXP indexesSEXP, SEXP valuesSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< Rcpp::List >::type sdv(sdvSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type indexes(indexesSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type values(valuesSEXP);
+    stdvectorReplace(sdv, indexes, values);
+    return R_NilValue;
+END_RCPP
+}
+// stdvectorErase
+void stdvectorErase(Rcpp::List sdv, int indexFrom, int indexTo);
+RcppExport SEXP stdvectors_stdvectorErase(SEXP sdvSEXP, SEXP indexFromSEXP, SEXP indexToSEXP) {
+BEGIN_RCPP
+    Rcpp::traits::input_parameter< Rcpp::List >::type sdv(sdvSEXP);
+    Rcpp::traits::input_parameter< int >::type indexFrom(indexFromSEXP);
+    Rcpp::traits::input_parameter< int >::type indexTo(indexToSEXP);
+    stdvectorErase(sdv, indexFrom, indexTo);
+    return R_NilValue;
 END_RCPP
 }
 // stdvectorClone

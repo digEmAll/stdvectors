@@ -46,6 +46,9 @@ indexToTypeVectorized <- function(i,type){
 #                                     TESTS                                        #
 ####################################################################################
 testFun <- function(reserve = 0, nelements = 7){
+  
+  stopifnot(nelements>5)
+  
   nelements <- as.integer(nelements)
   types <- c("integer","numeric","double","character","logical","any")
   
@@ -86,8 +89,32 @@ testFun <- function(reserve = 0, nelements = 7){
   for(type in types){
     s <- sdvList[[type]]
     sClone <- sdvListClone[[type]]
-    assert(paste("check clone equal for",type),identical(stdvectorToVector(s),stdvectorToVector(s)))
+    assert(paste("check clone equal for",type),identical(stdvectorToVector(sClone),stdvectorToVector(s)))
   }
+
+  # replace 2nd elements in clones
+  for(type in types){
+    s <- sdvListClone[[type]]
+    replacement <- indexToType(3,type)
+    stdvectorReplace(s,2,replacement)
+    assert(paste("check replace 2nd elements for",type),identical(stdvectorSubset(s,2),indexToTypeVectorized(3,type)))
+  }
+    
+  # remove first 2 elements in clones
+  for(type in types){
+    s <- sdvListClone[[type]]
+    expected <- indexToTypeVectorized(3:nelements,type)
+    stdvectorErase(s,1,2)
+    assert(paste("check remove first 2 elements for",type),identical(stdvectorToVector(s),expected))
+  }
+  # remove (again) first elements in clones
+  for(type in types){
+    s <- sdvListClone[[type]]
+    expected <- indexToTypeVectorized(4:nelements,type)
+    stdvectorErase(s,1,1)
+    assert(paste("check remove first elements for",type),identical(stdvectorToVector(s),expected))
+  }
+  
   # clear the clones and check sizes == 0
   assert("check clear",all(sapply(sdvListClone,function(x){stdvectorClear(x);stdvectorSize(x)})==0))
   

@@ -27,16 +27,12 @@ Marco Giuliano
 Maintainer: Marco Giuliano <mgiuliano.mail@gmail.com>
 }
 \references{
-  This optional section can contain literature or other references for
-  background information.
 cpp reference page : http://en.cppreference.com/w/
 }
 \keyword{ package }
 \keyword{ manip }
 \keyword{ iteration }
 \keyword{ programming }
-\seealso{
-}
 \examples{
   sv <- stdvectorCreate('integer')
   for(i in 1:10000){
@@ -55,8 +51,6 @@ cpp reference page : http://en.cppreference.com/w/
         }
       }
     )
-
-    # ~0.08 sec
     system.time({
         v <- stdvectorCreate('integer')
         for(i in 1:100000){
