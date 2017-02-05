@@ -47,7 +47,7 @@ tm1 <- system.time({
 }
 )
 
-# R vector (pre-allocation -> unfair test since the assumption is to not know the size in advance)
+# R vector (pre-allocation -> unfair test since the assumption is not knowing the size in advance)
 tm2 <- system.time({
   v <- rep.int(NA_integer_,n)
   for(i in 1:n){
