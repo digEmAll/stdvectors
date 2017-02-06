@@ -8,4 +8,6 @@ Maintainer: Marco Giuliano <mgiuliano.mail@gmail.com>
 Description: Allows the creation and manipulation of C++ std::vector's in R.
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.12.4)
+URL: https://github.com/digEmAll/stdvectors
+BugReports: https://github.com/digEmAll/stdvectors/issues
 LinkingTo: Rcpp
