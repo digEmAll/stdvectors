@@ -13,7 +13,7 @@
 Package: \tab stdvectors\cr
 Type: \tab Package\cr
 Version: \tab 0.0.3\cr
-Date: \tab 2017-02-04\cr
+Date: \tab 2017-02-20\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -34,10 +34,15 @@ cpp reference page : http://en.cppreference.com/w/
 \keyword{ iteration }
 \keyword{ programming }
 \examples{
+  # create a stdvector
   sv <- stdvectorCreate('integer')
-  for(i in 1:10000){
+  # add 100 values to it
+  for(i in 1:100){
+    # note that sv is modified in-place
     stdvectorPushBack(sv,i)
   }
+  # get a normal R vector from the stdvector
+  v <- stdvectorToVector(sv)
 
   \dontrun{
   

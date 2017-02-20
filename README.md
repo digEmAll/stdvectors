@@ -62,6 +62,7 @@ tm3 <- system.time({
   for(i in 1:n){
     stdvectorPushBack(sv,i)
   }
+  v <- stdvectorToVector(sv)
 }
 )
 

@@ -85,10 +85,14 @@ is.stdvector(x)
 See http://en.cppreference.com/w/cpp/container/vector
 }
 \examples{
+  # create a stdvector
   sv <- stdvectorCreate('integer')
+  # add 100 values to it
   for(i in 1:100){
+    # note that sv is modified in-place
     stdvectorPushBack(sv,i)
   }
+  # get a normal R vector from the stdvector
   v <- stdvectorToVector(sv)
 
 }
