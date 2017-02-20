@@ -12,7 +12,7 @@
 \tabular{ll}{
 Package: \tab stdvectors\cr
 Type: \tab Package\cr
-Version: \tab 0.0.3\cr
+Version: \tab 0.0.5\cr
 Date: \tab 2017-02-20\cr
 License: \tab GPL (>= 2)\cr
 }
