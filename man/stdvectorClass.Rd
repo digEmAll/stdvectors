@@ -62,7 +62,8 @@ is.stdvector(x)
 \itemize{
   \item stdvector objects are treated as references, so if you do \code{sv2 <- sv1} and then you modify \code{sv2} actually also \code{sv1} will be modified. You need to do \code{sv2 <- stdvectorClone(sv1)} to actually create a copy.
   \item \code{stdvectorPushBack} in case of stdvector of \code{type='any'} will append the element passed in the argument \code{values} as a single new element of the vector, even if it's a list.
-  \item \code{stdvectorReplace}  in case of stdvector of \code{type='any'} will accept only \code{indexes} of length one.
+  \item \code{stdvectorSubset} indexes must be between 1 and the size of the stdvector.
+  \item \code{stdvectorReplace} \code{indexes} and \code{values} must have the same length. In case of stdvector of \code{type='any'} will accept only \code{indexes} of length one.
   }
 }
 \value{
@@ -85,7 +86,7 @@ See http://en.cppreference.com/w/cpp/container/vector
 }
 \examples{
   sv <- stdvectorCreate('integer')
-  for(i in 1:10000){
+  for(i in 1:100){
     stdvectorPushBack(sv,i)
   }
   v <- stdvectorToVector(sv)
