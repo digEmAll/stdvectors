@@ -50,9 +50,9 @@ is.stdvector(x)
     \item \code{stdvectorSize} returns the number of elements of an existing stdvector.
     \item \code{stdvectorClear} removes all the elements of an existing stdvector.
     \item \code{stdvectorToVector} turns an existing stdvector into an R vector of the type chosen when the stdvector has been created.
-	  \item \code{stdvectorSubset} subsets an existing stdvector returning an R vector with the values corresponding to the selected indexes.
-	  \item \code{stdvectorReplace} replace the elements at \code{indexes} positions with the values in \code{values} argument (see note for \code{type='any'}).
-	  \item \code{stdvectorErase} remove the elements from \code{indexFrom} to \code{indexTo} positions.
+    \item \code{stdvectorSubset} subsets an existing stdvector returning an R vector with the values corresponding to the selected indexes.
+    \item \code{stdvectorReplace} replace the elements at \code{indexes} positions with the values in \code{values} argument (see note for \code{type='any'}).
+    \item \code{stdvectorErase} remove the elements from \code{indexFrom} to \code{indexTo} positions.
     \item \code{stdvectorClone} create a deep copy of the stdvector object.
   }
 
@@ -75,9 +75,9 @@ is.stdvector(x)
     \item \code{stdvectorSize} returns an integer equal to the size of the \code{stdvector}.
     \item \code{stdvectorClear} returns \code{NULL} invisibly.
     \item \code{stdvectorToVector} returns an R vector of the type chosen when the \code{stdvector} has been created (\code{type='any'} will return a list).
-	  \item \code{stdvectorSubset} returns an R vector (of the type chosen when the \code{stdvector} has been created, \code{type='any'} will return a list) with the values corresponding to the selected indexes.
-	  \item \code{stdvectorReplace} returns \code{NULL} invisibly.
-	  \item \code{stdvectorErase} returns \code{NULL} invisibly.
+    \item \code{stdvectorSubset} returns an R vector (of the type chosen when the \code{stdvector} has been created, \code{type='any'} will return a list) with the values corresponding to the selected indexes.
+    \item \code{stdvectorReplace} returns \code{NULL} invisibly.
+    \item \code{stdvectorErase} returns \code{NULL} invisibly.
     \item \code{stdvectorClone} returns an object of class \code{stdvector} which is the copy of the passed object.
   }
 }
