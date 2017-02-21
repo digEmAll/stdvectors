@@ -2,226 +2,226 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 .stdNumericCreate <- function(reserve = 0L) {
-    .Call('stdvectors_stdNumericCreate', PACKAGE = 'stdvectors', reserve)
+    .Call(stdvectors_stdNumericCreate, reserve)
 }
 
 .stdNumericPushBack <- function(p, toAppend) {
-    invisible(.Call('stdvectors_stdNumericPushBack', PACKAGE = 'stdvectors', p, toAppend))
+    invisible(.Call(stdvectors_stdNumericPushBack, p, toAppend))
 }
 
 .stdNumericSize <- function(p) {
-    .Call('stdvectors_stdNumericSize', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdNumericSize, p)
 }
 
 .stdNumericClear <- function(p) {
-    invisible(.Call('stdvectors_stdNumericClear', PACKAGE = 'stdvectors', p))
+    invisible(.Call(stdvectors_stdNumericClear, p))
 }
 
 .stdNumericToVector <- function(p) {
-    .Call('stdvectors_stdNumericToVector', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdNumericToVector, p)
 }
 
 .stdNumericSubset <- function(p, indexes) {
-    .Call('stdvectors_stdNumericSubset', PACKAGE = 'stdvectors', p, indexes)
+    .Call(stdvectors_stdNumericSubset, p, indexes)
 }
 
 .stdNumericReplace <- function(p, indexes, values) {
-    invisible(.Call('stdvectors_stdNumericReplace', PACKAGE = 'stdvectors', p, indexes, values))
+    invisible(.Call(stdvectors_stdNumericReplace, p, indexes, values))
 }
 
 .stdNumericErase <- function(p, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdNumericErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdNumericErase, p, indexFrom, indexTo))
 }
 
 .stdNumericClone <- function(p) {
-    .Call('stdvectors_stdNumericClone', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdNumericClone, p)
 }
 
 .stdIntegerCreate <- function(reserve = 0L) {
-    .Call('stdvectors_stdIntegerCreate', PACKAGE = 'stdvectors', reserve)
+    .Call(stdvectors_stdIntegerCreate, reserve)
 }
 
 .stdIntegerPushBack <- function(p, toAppend) {
-    invisible(.Call('stdvectors_stdIntegerPushBack', PACKAGE = 'stdvectors', p, toAppend))
+    invisible(.Call(stdvectors_stdIntegerPushBack, p, toAppend))
 }
 
 .stdIntegerSize <- function(p) {
-    .Call('stdvectors_stdIntegerSize', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdIntegerSize, p)
 }
 
 .stdIntegerClear <- function(p) {
-    invisible(.Call('stdvectors_stdIntegerClear', PACKAGE = 'stdvectors', p))
+    invisible(.Call(stdvectors_stdIntegerClear, p))
 }
 
 .stdIntegerToVector <- function(p) {
-    .Call('stdvectors_stdIntegerToVector', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdIntegerToVector, p)
 }
 
 .stdIntegerSubset <- function(p, indexes) {
-    .Call('stdvectors_stdIntegerSubset', PACKAGE = 'stdvectors', p, indexes)
+    .Call(stdvectors_stdIntegerSubset, p, indexes)
 }
 
 .stdIntegerReplace <- function(p, indexes, values) {
-    invisible(.Call('stdvectors_stdIntegerReplace', PACKAGE = 'stdvectors', p, indexes, values))
+    invisible(.Call(stdvectors_stdIntegerReplace, p, indexes, values))
 }
 
 .stdIntegerErase <- function(p, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdIntegerErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdIntegerErase, p, indexFrom, indexTo))
 }
 
 .stdNumericClone <- function(p) {
-    .Call('stdvectors_stdIntegerClone', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdIntegerClone, p)
 }
 
 .stdCharacterCreate <- function(reserve = 0L) {
-    .Call('stdvectors_stdCharacterCreate', PACKAGE = 'stdvectors', reserve)
+    .Call(stdvectors_stdCharacterCreate, reserve)
 }
 
 .stdCharacterPushBack <- function(p, toAppend) {
-    invisible(.Call('stdvectors_stdCharacterPushBack', PACKAGE = 'stdvectors', p, toAppend))
+    invisible(.Call(stdvectors_stdCharacterPushBack, p, toAppend))
 }
 
 .stdCharacterSize <- function(p) {
-    .Call('stdvectors_stdCharacterSize', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdCharacterSize, p)
 }
 
 .stdCharacterClear <- function(p) {
-    invisible(.Call('stdvectors_stdCharacterClear', PACKAGE = 'stdvectors', p))
+    invisible(.Call(stdvectors_stdCharacterClear, p))
 }
 
 .stdCharacterToVector <- function(p) {
-    .Call('stdvectors_stdCharacterToVector', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdCharacterToVector, p)
 }
 
 .stdCharacterSubset <- function(p, indexes) {
-    .Call('stdvectors_stdCharacterSubset', PACKAGE = 'stdvectors', p, indexes)
+    .Call(stdvectors_stdCharacterSubset, p, indexes)
 }
 
 .stdCharacterReplace <- function(p, indexes, values) {
-    invisible(.Call('stdvectors_stdCharacterReplace', PACKAGE = 'stdvectors', p, indexes, values))
+    invisible(.Call(stdvectors_stdCharacterReplace, p, indexes, values))
 }
 
 .stdCharacterErase <- function(p, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdCharacterErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdCharacterErase, p, indexFrom, indexTo))
 }
 
 .stdCharacterClone <- function(p) {
-    .Call('stdvectors_stdCharacterClone', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdCharacterClone, p)
 }
 
 .stdLogicalCreate <- function(reserve = 0L) {
-    .Call('stdvectors_stdLogicalCreate', PACKAGE = 'stdvectors', reserve)
+    .Call(stdvectors_stdLogicalCreate, reserve)
 }
 
 .stdLogicalPushBack <- function(p, toAppend) {
-    invisible(.Call('stdvectors_stdLogicalPushBack', PACKAGE = 'stdvectors', p, toAppend))
+    invisible(.Call(stdvectors_stdLogicalPushBack, p, toAppend))
 }
 
 .stdLogicalSize <- function(p) {
-    .Call('stdvectors_stdLogicalSize', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdLogicalSize, p)
 }
 
 .stdLogicalClear <- function(p) {
-    invisible(.Call('stdvectors_stdLogicalClear', PACKAGE = 'stdvectors', p))
+    invisible(.Call(stdvectors_stdLogicalClear, p))
 }
 
 .stdLogicalToVector <- function(p) {
-    .Call('stdvectors_stdLogicalToVector', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdLogicalToVector, p)
 }
 
 .stdLogicalSubset <- function(p, indexes) {
-    .Call('stdvectors_stdLogicalSubset', PACKAGE = 'stdvectors', p, indexes)
+    .Call(stdvectors_stdLogicalSubset, p, indexes)
 }
 
 .stdLogicalReplace <- function(p, indexes, values) {
-    invisible(.Call('stdvectors_stdLogicalReplace', PACKAGE = 'stdvectors', p, indexes, values))
+    invisible(.Call(stdvectors_stdLogicalReplace, p, indexes, values))
 }
 
 .stdLogicalErase <- function(p, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdLogicalErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdLogicalErase, p, indexFrom, indexTo))
 }
 
 .stdCharacterClone <- function(p) {
-    .Call('stdvectors_stdLogicalClone', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdLogicalClone, p)
 }
 
 .stdListCreate <- function(reserve = 0L) {
-    .Call('stdvectors_stdAnyCreate', PACKAGE = 'stdvectors', reserve)
+    .Call(stdvectors_stdAnyCreate, reserve)
 }
 
 .stdAnyPushBack <- function(p, toAppend) {
-    invisible(.Call('stdvectors_stdAnyPushBack', PACKAGE = 'stdvectors', p, toAppend))
+    invisible(.Call(stdvectors_stdAnyPushBack, p, toAppend))
 }
 
 .stdAnySize <- function(p) {
-    .Call('stdvectors_stdAnySize', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdAnySize, p)
 }
 
 .stdAnyClear <- function(p) {
-    invisible(.Call('stdvectors_stdAnyClear', PACKAGE = 'stdvectors', p))
+    invisible(.Call(stdvectors_stdAnyClear, p))
 }
 
 .stdAnyToVector <- function(p) {
-    .Call('stdvectors_stdAnyToVector', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdAnyToVector, p)
 }
 
 .stdAnySubset <- function(p, indexes) {
-    .Call('stdvectors_stdAnySubset', PACKAGE = 'stdvectors', p, indexes)
+    .Call(stdvectors_stdAnySubset, p, indexes)
 }
 
 .stdAnyReplace <- function(p, index, value) {
-    invisible(.Call('stdvectors_stdAnyReplace', PACKAGE = 'stdvectors', p, index, value))
+    invisible(.Call(stdvectors_stdAnyReplace, p, index, value))
 }
 
 .stdAnyErase <- function(p, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdAnyErase', PACKAGE = 'stdvectors', p, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdAnyErase, p, indexFrom, indexTo))
 }
 
 .stdAnyClone <- function(p) {
-    .Call('stdvectors_stdAnyClone', PACKAGE = 'stdvectors', p)
+    .Call(stdvectors_stdAnyClone, p)
 }
 
 .getTypeFromString <- function(type) {
-    .Call('stdvectors_getTypeFromString', PACKAGE = 'stdvectors', type)
+    .Call(stdvectors_getTypeFromString, type)
 }
 
 .getStringFromType <- function(type) {
-    .Call('stdvectors_getStringFromType', PACKAGE = 'stdvectors', type)
+    .Call(stdvectors_getStringFromType, type)
 }
 
 stdvectorCreate <- function(type = "double", reserve = 0L) {
-    .Call('stdvectors_stdvectorCreate', PACKAGE = 'stdvectors', type, reserve)
+    .Call(stdvectors_stdvectorCreate, type, reserve)
 }
 
 stdvectorPushBack <- function(sdv, values) {
-    invisible(.Call('stdvectors_stdvectorPushBack', PACKAGE = 'stdvectors', sdv, values))
+    invisible(.Call(stdvectors_stdvectorPushBack, sdv, values))
 }
 
 stdvectorSize <- function(sdv) {
-    .Call('stdvectors_stdvectorSize', PACKAGE = 'stdvectors', sdv)
+    .Call(stdvectors_stdvectorSize, sdv)
 }
 
 stdvectorClear <- function(sdv) {
-    invisible(.Call('stdvectors_stdvectorClear', PACKAGE = 'stdvectors', sdv))
+    invisible(.Call(stdvectors_stdvectorClear, sdv))
 }
 
 stdvectorToVector <- function(sdv) {
-    .Call('stdvectors_stdvectorToVector', PACKAGE = 'stdvectors', sdv)
+    .Call(stdvectors_stdvectorToVector, sdv)
 }
 
 stdvectorSubset <- function(sdv, indexes) {
-    .Call('stdvectors_stdvectorSubset', PACKAGE = 'stdvectors', sdv, indexes)
+    .Call(stdvectors_stdvectorSubset, sdv, indexes)
 }
 
 stdvectorReplace <- function(sdv, indexes, values) {
-    invisible(.Call('stdvectors_stdvectorReplace', PACKAGE = 'stdvectors', sdv, indexes, values))
+    invisible(.Call(stdvectors_stdvectorReplace, sdv, indexes, values))
 }
 
 stdvectorErase <- function(sdv, indexFrom, indexTo) {
-    invisible(.Call('stdvectors_stdvectorErase', PACKAGE = 'stdvectors', sdv, indexFrom, indexTo))
+    invisible(.Call(stdvectors_stdvectorErase, sdv, indexFrom, indexTo))
 }
 
 stdvectorClone <- function(sdv) {
-    .Call('stdvectors_stdvectorClone', PACKAGE = 'stdvectors', sdv)
+    .Call(stdvectors_stdvectorClone, sdv)
 }
 
