@@ -5,6 +5,10 @@ The `stdvectors` package allows the creation and manipulation of C++ std::vector
 std::vector's are dynamically allocated arrays, which are especially helpful when you need to fill a huge vector (e.g. in a loop) 
 but you don't know the size in advance.
 
+### Installation
+
+The package is available on CRAN : https://cran.r-project.org/package=stdvectors
+
 ### Examples : 
 
 - Create a vector by adding elements one by one :
