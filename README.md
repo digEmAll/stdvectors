@@ -1,3 +1,5 @@
+[![](https://cranlogs.r-pkg.org/badges/stdvectors)](https://cran.r-project.org/package=stdvectors)
+
 # stdvectors
 ## C++ Standard Library Vectors in R
 
